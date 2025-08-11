@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atomberg SoV Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🌪️ Atomberg – Smart Fan Share of Voice</h1>
+
+    <section class="search">
+      <input id="q" placeholder="smart fan" value="smart fan" />
+      <button onclick="run()">Analyze</button>
+    </section>
+
+    <section id="loading" class="hidden">⌛ Running analysis…</section>
+
+    <section id="results" class="hidden">
+      <h2>Key Metrics</h2>
+      <div class="grid">
+        <div class="card"><span id="sov"></span><small>SoV</small></div>
+        <div class="card"><span id="eng_sov"></span><small>Engagement SoV</small></div>
+        <div class="card"><span id="sent"></span><small>Avg Sentiment</small></div>
+        <div class="card"><span id="pos"></span><small>Positive Share</small></div>
+      </div>
+
+      <canvas id="pie" height="240"></canvas>
+      <canvas id="bar" height="240"></canvas>
+
+      <h2>Insights</h2>
+      <ul id="ins"></ul>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

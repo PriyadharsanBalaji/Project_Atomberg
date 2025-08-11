@@ -1,0 +1,9 @@
+body{font-family:system-ui;background:#eef2ff;margin:0}
+.container{max-width:960px;margin:auto;padding:2rem}
+h1{text-align:center}
+.search{display:flex;gap:1rem;justify-content:center;margin:2rem 0}
+input{flex:1;padding:.8rem;font-size:1rem}
+button{padding:.8rem 1.5rem;font-size:1rem;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:1rem 0}
+.card{background:#fff;border-radius:8px;padding:1rem;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+.hidden{display:none}
