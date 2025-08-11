@@ -32,28 +32,37 @@ This project implements a scalable, rate-limit-aware pipeline using Python, Flas
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/atomberg-sov-analysis.git
+git clone https://github.com/PriyadharsanBalaji/Project_Atomberg.git
 cd atomberg-sov-analysis
+
 2. Create and Activate Virtual Environment
 bash
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
+
 3. Install Dependencies
 bash
 pip install -r requirements.txt
+
 4. Configure API Keys
 Duplicate .env.template as .env
+
+
 Add your API keys:
-text
+
 GEMINI_API_KEY=your_gemini_api_key_here
 TAVILY_API_KEY=your_tavily_api_key_here
 FLASK_SECRET_KEY=your_flask_secret_key_here
+
+
 5. Run the Backend Server
+
 bash
 python app.py
 Open http://localhost:5000 in your browser to access the dashboard or use API endpoints at http://localhost:5000/.
+
 Code Structure
-text
+
 atomberg-sov/
 │
 ├── agent.py        # Core AI workflow, rate-limited content fetching & analysis
